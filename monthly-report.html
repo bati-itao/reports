@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
@@ -32,9 +33,9 @@
                 "text": "ESDC / IT Accessibility office",
                 "href": "https://bati-itao.github.io/"
             }],
-           "breadcrumbs" : [{
+            "breadcrumbs": [{
                 "title": "Reports",
-                "href" : "./index.html"
+                "href": "./index.html"
             }],
             "lngLinks": [{
                 "lang": "fr",
@@ -45,8 +46,8 @@
         });
     </script>
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont">Monthly Report</h1>
-         <!-- <section class="alert alert-info hidden-print">
+        <h1 property="name" id="wb-cont">Monthly Report - March 2020</h1>
+        <!-- <section class="alert alert-info hidden-print">
           
             <h2>Instructions</h2>
             <p>Select the start and end date of the desired week and click on the Submit button to generate the report. If you wish to save the report as a PDF click the print button and choose the printer Microsoft Print to PDF or Foxit PhantomPDF Printer. </p>
@@ -66,42 +67,61 @@
         </div>
     <div id="weeklyReport">
     </div>-->
-    <table class="wb-charts wb-charts-bar table">
-        <caption>Accessibility Centre of Excellence (ACE) Ticket summary</caption>
-        <thead>
-            <tr>
-                <th>&nbsp;</th>
-                <th>IT Related</th>
-                <th>Non-IT Related</th>
-        </tr></thead>
-        <tbody>
-    <tr>
-                <th>New This Month</th>
-                <td id="nbReceivedIT"></td>
-                <td id="nbReceived"></td>
-            </tr><tr>
-                <th>Total new Resolved this Month</th>
-                <td id="nbNewResolvedIT"></td>
-                <td id="nbNewResolved"></td>
-            </tr><tr>
-                <th>Total Resolved this Month</th>
-                <td id="nbResolvedIT"></td>
-                <td id="nbResolved"></td>
-            </tr><tr>
-                <th>Active in Progress</th>
-                <td id="nbInProgressIT"></td>
-                <td id="nbInProgress"></td>
-            </tr></tbody></table>
-    <p>AVG Resolution time (days) IT Related: <span id="avgTimeIT"></span></p>
-    <p>AVG Resolution time (days) Non-IT Related: <span id="avgTime"></span></p>
-    <button type="submit" class="btn btn-default hidden-print" onclick="window.print();return false;"><span class="fa fa-print"></span> Print</button>
-<div id="def-preFooter" class="hidden-print"></div>
-<script src="./scripts/preFooter.min.js"></script>
-</main>
-<div id="def-footer" class="hidden-print"></div>
-<script src="./scripts/appFooter.min.js"></script>
-<script src="./scripts/refFooter.min.js"></script>
-<script src="./scripts/bati-itao.min.js"></script>
+        <table class="wb-charts wb-charts-bar table">
+            <caption>Accessibility Centre of Excellence (ACE) Ticket summary</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>IT Related</th>
+                    <th>Non-IT Related</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>New This Month</th>
+                    <td id="nbReceivedIT"></td>
+                    <td id="nbReceived"></td>
+                </tr>
+                <tr>
+                    <th>Total new Resolved this Month</th>
+                    <td id="nbNewResolvedIT"></td>
+                    <td id="nbNewResolved"></td>
+                </tr>
+                <tr>
+                    <th>Total Resolved this Month</th>
+                    <td id="nbResolvedIT"></td>
+                    <td id="nbResolved"></td>
+                </tr>
+                <tr>
+                    <th>Active in Progress</th>
+                    <td id="nbInProgressIT"></td>
+                    <td id="nbInProgress"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>AVG Resolution time (days) IT Related: <span id="avgTimeIT"></span></p>
+        <p>AVG Resolution time (days) Non-IT Related: <span id="avgTime"></span></p>
+        <button type="submit" class="btn btn-default hidden-print" onclick="window.print();return false;"><span
+                class="fa fa-print"></span> Print</button>
+        <div id="def-preFooter" class="hidden-print"></div>
+        <script src="./scripts/preFooter.min.js"></script>
+    </main>
+    <div id="def-footer" class="hidden-print"></div>
+    <script src="./scripts/appFooter.min.js"></script>
+    <script src="./scripts/refFooter.min.js"></script>
+    <script src="./scripts/bati-itao.min.js"></script>
+    <script>
+        document.getElementById("nbReceived").innerHTML = nbReceivedMarch;
+        document.getElementById("nbNewResolved").innerHTML = nbNewResolvedMarch;
+        document.getElementById("nbResolved").innerHTML = nbResolvedMarch;
+        document.getElementById("nbInProgress").innerHTML = nbInProgressMarch;
+        document.getElementById("nbReceivedIT").innerHTML = nbReceivedMarchIT;
+        document.getElementById("nbNewResolvedIT").innerHTML = nbNewResolvedMarchIT;
+        document.getElementById("nbResolvedIT").innerHTML = nbResolvedMarchIT;
+        document.getElementById("nbInProgressIT").innerHTML = nbInProgressMarchIT;
+        document.getElementById("avgTime").innerHTML = Number.parseInt(averageTime);
+        document.getElementById("avgTimeIT").innerHTML = Number.parseInt(averageTimeIT);
+    </script>
 </body>
 
 </html>

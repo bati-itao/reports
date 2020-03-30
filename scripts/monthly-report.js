@@ -19,20 +19,20 @@ var processingTime = 0;
 var counterIT = 0;
 var processingTimeIT = 0;
 
-var dateReceived
-var dateResolved
+var dateReceived;
+var dateResolved;
 
-var dateReceivedIT
-var dateResolvedIT
+var dateReceivedIT;
+var dateResolvedIT;
 
-var differenceInTime
-var differenceInDays
+var differenceInTime;
+var differenceInDays;
 
-var differenceInTimeIT
-var differenceInDaysIT
+var differenceInTimeIT;
+var differenceInDaysIT;
 
-var averageTime
-var averageTimeIT
+var averageTime;
+var averageTimeIT;
 
 var totalNew = 0;
 var totalNewIT = 0;
