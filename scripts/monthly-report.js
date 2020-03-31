@@ -34,14 +34,25 @@ var differenceInDaysIT;
 var averageTime;
 var averageTimeIT;
 
+//Total
+
+var october = new Date(2019, 10, 01);
+var march = new Date(2020, 03, 31);
+var totalDateReceived;
+var totalDateReceivedIT;
 var totalNew = 0;
 var totalNewIT = 0;
 
+var totalDateResolved;
+var totalDateResolvedIT;
 var totalResolved = 0;
 var totalResolvedIT = 0;
-
-var totalInProgress = 0;
-var totalInProgressIT = 0;
+var inProgress1 = 0;
+var inProgress2 = 0;
+var inProgress1IT = 0;
+var inProgress2IT = 0;
+var totalInProgress;
+var totalInProgressIT;
 
 var json = (function () {
     var json = null;
@@ -65,13 +76,17 @@ var json = (function () {
                     case "Procurement Advice on Accessible ICT":
                     case "Training":
                         if (element["Date received"].includes("2020-03")) {
+                            switch (element["Status"]) {
+                                case "In progress":
+                                case "Assigned":
+                                case "On Hold":
+                                    nbInProgressMarch++;
+                                    break;
+                            };
                             nbReceivedMarch++;
                         };
                         if (element["Date resolved"].includes("2020-03") && element["Date received"].includes("2020-03")) {
                             nbNewResolvedMarch++;
-                        };
-                        if (element["Date resolved"].includes("2020-03")) {
-                            nbResolvedMarch++;
                             //AVG Non-IT
                             dateReceived = new Date(element["Date received"]);
                             dateResolved = new Date(element["Date resolved"]);
@@ -80,13 +95,29 @@ var json = (function () {
                             counter++;
                             processingTime += differenceInDays;
                         };
-                        switch (element["Status"]) {
-                            case "In progress":
-                            case "Assigned":
-                            case "On Hold":
-                                nbInProgressMarch++;
-                                break;
+                        if (element["Date resolved"].includes("2020-03")) {
+                            nbResolvedMarch++;
+                            
                         };
+                        
+                        totalDateReceived = new Date(element["Date received"]);
+                        totalDateResolved = new Date(element["Date resolved"]);
+                        if (totalDateReceived.getTime() <= march.getTime() && totalDateReceived.getTime() >= october.getTime()) {
+                            totalNew++;
+                            if (totalDateResolved.getTime() > march.getTime()) {
+                                inProgress1++;
+                            };
+                            if ((element["Date resolved"]) == "") {
+                                if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
+                                    inProgress2++;
+                                };
+                            };
+                            totalInProgress = inProgress1 + inProgress2;
+                        }; 
+                        
+                        if (totalDateResolved.getTime() <= march.getTime() && totalDateResolved.getTime() >= october.getTime()) {
+                            totalResolved++;
+                        }; 
                         break;
                     case "Accessibility":
                     case "Accessibility Compliance Assessments on ICT Solutions":
@@ -103,12 +134,16 @@ var json = (function () {
                     case "Other":
                         if (element["Date received"].includes("2020-03")) {
                             nbReceivedMarchIT++;
+                            switch (element["Status"]) {
+                                case "In progress":
+                                case "Assigned":
+                                case "On Hold":
+                                    nbInProgressMarchIT++;
+                                    break;
+                            };
                         };
                         if (element["Date resolved"].includes("2020-03") && element["Date received"].includes("2020-03")) {
                             nbNewResolvedMarchIT++
-                        };
-                        if (element["Date resolved"].includes("2020-03")) {
-                            nbResolvedMarchIT++;
                             dateReceivedIT = new Date(element["Date received"]);
                             dateResolvedIT = new Date(element["Date resolved"]);
                             differenceInTimeIT = dateResolvedIT.getTime() - dateReceivedIT.getTime();
@@ -116,13 +151,29 @@ var json = (function () {
                             counterIT++;
                             processingTimeIT += differenceInDaysIT;
                         };
-                        switch (element["Status"]) {
-                            case "In progress":
-                            case "Assigned":
-                            case "On Hold":
-                                nbInProgressMarchIT++;
-                                break;
+                        if (element["Date resolved"].includes("2020-03")) {
+                            nbResolvedMarchIT++;
+                            
                         };
+                        
+                        totalDateReceivedIT = new Date(element["Date received"]);
+                        totalDateResolvedIT = new Date(element["Date resolved"]);
+                        if (totalDateReceivedIT.getTime() <= march.getTime() && totalDateReceivedIT.getTime() >= october.getTime()) {
+                            totalNewIT++;
+                            if (totalDateResolvedIT.getTime() > march.getTime()) {
+                                inProgress1IT++;
+                            };
+                            if ((element["Date resolved"]) == "") {
+                                if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
+                                    inProgress2IT++;
+                                };
+                            };
+                            totalInProgressIT = inProgress1IT + inProgress2IT;
+                        }; 
+                        
+                        if (totalDateResolvedIT.getTime() <= march.getTime() && totalDateResolvedIT.getTime() >= october.getTime()) {
+                            totalResolvedIT++;
+                        }; 
                         break;
                 };
             }

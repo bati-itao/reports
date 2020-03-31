@@ -21,6 +21,7 @@
     <!-- Scripts needed to generate the reports-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="scripts/monthly-report.js"></script>
+    <script src="scripts/csd.js"></script>
 </head>
 
 <body vocab="https://schema.org/" typeof="WebPage">
@@ -67,6 +68,7 @@
         </div>
     <div id="weeklyReport">
     </div>-->
+        <h2>Ticket summary</h2>
         <table class="wb-charts wb-charts-bar table">
             <caption>Accessibility Centre of Excellence (ACE) Ticket summary</caption>
             <thead>
@@ -101,6 +103,55 @@
         </table>
         <p>AVG Resolution time (days) IT Related: <span id="avgTimeIT"></span></p>
         <p>AVG Resolution time (days) Non-IT Related: <span id="avgTime"></span></p>
+        <h2>Yearly rollup</h2>
+        <table class="wb-charts wb-charts table">
+            <caption>Yearly Rollup</caption>
+            <thead>
+                <tr>
+                    <th>Year to Date (2019-2020)</th>
+                    <th>Total New</th>
+                    <th>Total Resolved</th>
+                    <th>Active in Progress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>IT Related</th>
+                    <td id="totalNewIT"></td>
+                    <td id="totalResolvedIT"></td>
+                    <td id="totalInProgressIT"></td>
+                </tr>
+                <tr>
+                    <th>Non-IT related</th>
+                    <td id="totalNew"></td>
+                    <td id="totalResolved"></td>
+                    <td id="totalInProgress"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Accessibility Compliance</h2>
+        <table class="table">
+            <caption>COTS and other applications (desktop, mainframe etc.)</caption>
+            <thead>
+                <tr>
+                    <th>Year to Date (2019-2020)</th>
+                    <th>Total number of Applications</th>
+                    <th>Total compliant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Custom</th>
+                    <td id="customTotalApp"></td>
+                    <td id="customTotalCompliant"></td>
+                </tr>
+                <tr>
+                    <th>COTS</th>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
         <button type="submit" class="btn btn-default hidden-print" onclick="window.print();return false;"><span
                 class="fa fa-print"></span> Print</button>
         <div id="def-preFooter" class="hidden-print"></div>
@@ -121,6 +172,16 @@
         document.getElementById("nbInProgressIT").innerHTML = nbInProgressMarchIT;
         document.getElementById("avgTime").innerHTML = Number.parseInt(averageTime);
         document.getElementById("avgTimeIT").innerHTML = Number.parseInt(averageTimeIT);
+
+        document.getElementById("totalNew").innerHTML = totalNew;
+        document.getElementById("totalResolved").innerHTML = totalResolved;
+        document.getElementById("totalInProgress").innerHTML = totalInProgress;
+
+        document.getElementById("totalNewIT").innerHTML = totalNewIT;
+        document.getElementById("totalResolvedIT").innerHTML = totalResolvedIT;
+        document.getElementById("totalInProgressIT").innerHTML = totalInProgressIT;
+        document.getElementById("customTotalApp").innerHTML = customTotalApp;
+        document.getElementById("customTotalCompliant").innerHTML = customTotalCompliant;
     </script>
 </body>
 

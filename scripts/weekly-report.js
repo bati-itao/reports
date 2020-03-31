@@ -67,7 +67,7 @@ function validateForm() {
                             differenceInDays = differenceInTime / (1000 * 3600 * 24);
                             counter++;
                             processingTime += differenceInDays;
-                        };
+                        }; 
 
                         currentDateReceived = new Date(element["Date received"]);
                         if (currentDateReceived.getTime() <= endDate.getTime() && currentDateReceived.getTime() >= startDate.getTime()) {
