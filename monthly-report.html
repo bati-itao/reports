@@ -132,6 +132,45 @@
         </table>
         <h2>Accessibility Compliance</h2>
         <table class="table">
+            <caption>Web application/system</caption>
+            <thead>
+                <tr>
+                    <th>Fiscal 2019-20</th>
+                    <th>Public Facing Total number of Applications</th>
+                    <th>(Source TS) # at 100%</th>
+                    <th># < 100%</th>
+                    <th>TBD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Q4</th>
+                    <td id="publicFacingTotal"></td>
+                    <td id="number1"></td>
+                    <td id="number2"></td>
+                    <td id="number3"></td>
+                </tr>
+                <tr>
+                    <th>Q1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Q2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Q3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table">
             <caption>COTS and other applications (desktop, mainframe etc.)</caption>
             <thead>
                 <tr>
@@ -185,6 +224,11 @@
         document.getElementById("customTotalCompliant").innerHTML = customTotalCompliant;
         document.getElementById("cotsTotalApp").innerHTML = cotsTotalApp;
         document.getElementById("cotsTotalCompliant").innerHTML = cotsTotalCompliant;
+
+        document.getElementById("publicFacingTotal").innerHTML = publicFacingTotal;
+        document.getElementById("number1").innerHTML = number1;
+        document.getElementById("number2").innerHTML = number2;
+        document.getElementById("number3").innerHTML = number3;
     </script>
 </body>
 
