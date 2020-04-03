@@ -72,7 +72,7 @@
     "Category": "Awareness",
     "Service": "Strategy and Partnerships",
     "Sub-service": "André Demers",
-    "Notes": "The goal of the presentation is to improve the understanding of our journey mapping team, here at Service Canada, as we work on highlighting pain points and identifying opportunities for improvements while mapping clients’ journeys, particularly persons with disabilities, interacting with the government for services and programs across various channels.  We are located at Place du Portage, Phase IV in Gatineau (Hull)."
+    "Notes": "The goal of the presentation is to improve the understanding of our journey mapping team, here at Service Canada, as we work on highlighting pain points and identifying opportunities for improvements while mapping clients’ journeys, particularly persons with disabilities, interacting with the government for services and programs across various channels.  We are located at Place du Portage, Phase IV in Gatineau (Hull)."
   },
   {
     "Request #": "A11Y-00014",
@@ -1246,7 +1246,7 @@
   },
   {
     "Request #": "A11Y-0066",
-    "Short description": "The product owner needs an update on the progress of accessing CrushFTP Enterprise and an estimated  completion date",
+    "Short description": "The product owner needs an update on the progress of accessing CrushFTP Enterprise and an estimated  completion date",
     "Product": "",
     "Request source": "Email",
     "Date received": "2019-11-15",
@@ -1276,7 +1276,7 @@
   },
   {
     "Request #": "A11Y-0068",
-    "Short description": "J'ai maintenant Windows 10.  Adobe Reader n'est pas affecter pas ma configuration de couleur",
+    "Short description": "J'ai maintenant Windows 10.  Adobe Reader n'est pas affecter pas ma configuration de couleur",
     "Product": "",
     "Request source": "National Service Desk (NSD)",
     "Date received": "2019-11-08",
@@ -1645,7 +1645,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -2695,7 +2695,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Troubleshooting / Configuration",
     "Notes": ""
   },
@@ -2772,7 +2772,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Web assessments",
     "Sub-service": "",
-    "Notes": "Feb 17 - escalated \nFeb 17: TL replying that waiting on client's workbook\nFeb 20 : this application has been assessed recently , not urgent , waiting for client input estimated completion in 2 weeks (KL)"
+    "Notes": "Feb 17 - escalated \nFeb 17: TL replying that waiting on client's workbook\nFeb 20 : this application has been assessed recently , not urgent , waiting for client input estimated completion in 2 weeks (KL)\nMarch 4:  asked for update\nMarch 31: asked for update"
   },
   {
     "Request #": "A11Y-0168",
@@ -3157,12 +3157,12 @@
     "Date received": "2019-12-17",
     "Date resolved": "",
     "Service Delivery Standard": "10 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "JAWS",
     "Sub-service": "Troubleshooting / Configuration",
-    "Notes": "Feb 20 - requested Valerie to follow up on this one with Product management team (KL)\nFeb 21 - asked team for update\nSRU in the works - once it will be completed the dongle will be updated with JAWS2020"
+    "Notes": "Feb 20 - requested Valerie to follow up on this one with Product management team (KL)\nFeb 21 - asked team for update\nSRU in the works - once it will be completed the dongle will be updated with JAWS2020\nApril 2:  ticket put on hold during the covid-19 process as other softwares are more urgent"
   },
   {
     "Request #": "A11Y-0194",
@@ -3942,7 +3942,7 @@
     "Category": "Client’s Need Assessment",
     "Service": "Mobility",
     "Sub-service": "Assessment process",
-    "Notes": "Feb 17- ongoing work as to figure out another way for the client to log in to his pc - client is aware\nFeb 20 - requested SIRMIS ticket number to be added to tracking sheet\nMarch 2: looking for info about Windows Hello"
+    "Notes": "Feb 17- ongoing work as to figure out another way for the client to log in to his pc - client is aware\nFeb 20 - requested SIRMIS ticket number to be added to tracking sheet\nMarch 2: looking for info about Windows Hello\nMarch 23:  waiting on answer from another team"
   },
   {
     "Request #": "A11Y-0246",
@@ -4797,7 +4797,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Web assessments",
     "Sub-service": "",
-    "Notes": "Feb 18 - escalating to Richard as no responses\nFeb 20: team sent workbook to client and are waiting for it back\nFeb 27: asked team for update / waiting on workbook from client in order to continue the assessment"
+    "Notes": "Feb 18 - escalating to Richard as no responses\nFeb 20: team sent workbook to client and are waiting for it back\nFeb 27: asked team for update / waiting on workbook from client in order to continue the assessment\nMarch 10:  asked team for update\nMarch 31: asked team for update"
   },
   {
     "Request #": "A11Y-0302",
@@ -5095,7 +5095,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -8292,7 +8292,7 @@
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "Windows 10",
     "Sub-service": "",
-    "Notes": "Feb 20 - requested to alerie , to add more description"
+    "Notes": ""
   },
   {
     "Request #": "A11Y-0535",
@@ -8917,7 +8917,7 @@
     "Date received": "2020-02-14",
     "Date resolved": "",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Non-web assessments",
@@ -9125,9 +9125,9 @@
     "Product": "PowerFilm",
     "Request source": "Email",
     "Date received": "2020-02-18",
-    "Date resolved": "",
+    "Date resolved": "2020-03-24",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Non-web assessments",
@@ -9267,7 +9267,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Non-web assessments",
     "Sub-service": "",
-    "Notes": "Feb 26: asked for update on request as nothing in SRMIS\nFeb 27: waiting on installation package from client\nMarch 6:  issues with access to link - waiting for client to respond\nMarch 11: software needs to work with SP and dependant on Outlook. A PROD .NET computer is needed in order to to the testing"
+    "Notes": "Feb 26: asked for update on request as nothing in SRMIS\nFeb 27: waiting on installation package from client\nMarch 6:  issues with access to link - waiting for client to respond\nMarch 11: software needs to work with SP and dependant on Outlook. A PROD .NET computer is needed in order to to the testing\nMarch 26:  waiting on client to respond"
   },
   {
     "Request #": "A11Y-0599",
@@ -9567,7 +9567,7 @@
     "Category": "Client’s Need Assessment",
     "Service": "Blindness / Low Vision",
     "Sub-service": "Assessment process",
-    "Notes": "Feb 28: team has given a few solutions which the client will discuss with the employee and get back to team\nMarch 5: waiting for documents to be provided in order to initiate software set up"
+    "Notes": "Feb 28: team has given a few solutions which the client will discuss with the employee and get back to team\nMarch 5: waiting for documents to be provided in order to initiate software set up\nMarch 26: client is offline. Will contact client another day."
   },
   {
     "Request #": "A11Y-0619",
@@ -9710,14 +9710,14 @@
     "Product": "",
     "Request source": "Email",
     "Date received": "2020-03-05",
-    "Date resolved": "",
+    "Date resolved": "2020-04-02",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "Design and Development Advice on Accessible ICT",
-    "Service": "",
+    "Service": "Authoring tools",
     "Sub-service": "",
-    "Notes": "Ticket re-opened as it came back with more questions"
+    "Notes": "Ticket re-opened as it came back with more questions\n\nOn-going project"
   },
   {
     "Request #": "A11Y-0628",
@@ -9742,12 +9742,12 @@
     "Date received": "2020-02-24",
     "Date resolved": "",
     "Service Delivery Standard": "7 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "loan Bank Services",
     "Service": "AT Products",
     "Sub-service": "Lend / return",
-    "Notes": "March 9: email was sent to client on Feb 27 and waiting for reply"
+    "Notes": "March 9: email was sent to client on Feb 27 and waiting for reply\nclient has been advised that we will deal with this once we are back in the office"
   },
   {
     "Request #": "A11Y-0630",
@@ -9832,12 +9832,12 @@
     "Date received": "2020-02-26",
     "Date resolved": "",
     "Service Delivery Standard": "7 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "loan Bank Services",
     "Service": "AT Products",
     "Sub-service": "Lend / return",
-    "Notes": "March 9: waiting for client to respond\nMarch 12:  sent loan form to client for signature / waiting for client to return it"
+    "Notes": "March 9: waiting for client to respond\nMarch 12:  sent loan form to client for signature / waiting for client to return it\nclient has been advised that we will deal with this once we are back in the office"
   },
   {
     "Request #": "A11Y-0636",
@@ -9910,7 +9910,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Troubleshooting / Configuration",
     "Notes": ""
   },
@@ -9940,7 +9940,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Troubleshooting / Configuration",
     "Notes": "March 3: team has contacted client - client is away all week"
   },
@@ -10130,14 +10130,14 @@
     "Product": "",
     "Request source": "National Service Desk (NSD)",
     "Date received": "2020-02-28",
-    "Date resolved": "",
+    "Date resolved": "2020-04-02",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "JAWS",
     "Sub-service": "Software Installations / Removal",
-    "Notes": "March 2: sending form to client for signature\nMarch 10: still waiting on signed form - as client's manager was away\nMarch 16:  Added pc to app catalog for distribution"
+    "Notes": "March 2: sending form to client for signature\nMarch 10: still waiting on signed form - as client's manager was away\nMarch 16:  Added pc to app catalog for distribution\nMarch 24: client offline. Waiting to see if software was installed.\nApril 1:  asked for update"
   },
   {
     "Request #": "A11Y-0656",
@@ -10162,12 +10162,12 @@
     "Date received": "2020-02-28",
     "Date resolved": "",
     "Service Delivery Standard": "7 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "loan Bank Services",
     "Service": "AT Products",
     "Sub-service": "Lend / return",
-    "Notes": "March 12:  waiting on client"
+    "Notes": "March 12:  waiting on client\nclient has been advised that we will deal with this once we are back in the actual office"
   },
   {
     "Request #": "A11Y-0658",
@@ -10362,7 +10362,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "non-web assessment",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 26:  sente email to client, info needed"
   },
   {
     "Request #": "A11Y-0671",
@@ -10462,12 +10462,12 @@
     "Date received": "2020-03-03",
     "Date resolved": "",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "on hold",
     "Case ?": "",
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "non-web assessment",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 19: due to virus, client says this is not a priority. Put on hold."
   },
   {
     "Request #": "A11Y-0678",
@@ -10482,7 +10482,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "non-web assessment",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 23: waiting on reply from client\nMarch 31: client is out of office"
   },
   {
     "Request #": "A11Y-0679",
@@ -10497,7 +10497,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "non-web assessment",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 23: waiting on reply from client\nMarch 31: client is out of office"
   },
   {
     "Request #": "A11Y-0680",
@@ -10507,12 +10507,12 @@
     "Date received": "2020-03-04",
     "Date resolved": "",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "on hold",
     "Case ?": "",
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "non-web assessment",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 19: due to virus, client says this is not a priority. Put on hold."
   },
   {
     "Request #": "A11Y-0681",
@@ -10525,7 +10525,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -10540,7 +10540,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -10602,7 +10602,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Web assessments",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "April 1:  asked team for update"
   },
   {
     "Request #": "A11Y-0687",
@@ -10677,7 +10677,7 @@
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "Zoom Text for Windows",
     "Sub-service": "coaching",
-    "Notes": "March 13:  couldn't find bigger cursor. Will contact client next week to see what he is using at home"
+    "Notes": "March 13:  couldn't find bigger cursor. Will contact client next week to see what he is using at home\nMarch 23:  pending until can find a bigger cursor for client to use with Win 10"
   },
   {
     "Request #": "A11Y-0692",
@@ -10702,7 +10702,7 @@
     "Date received": "2020-03-06",
     "Date resolved": "",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "",
@@ -10735,7 +10735,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -10782,7 +10782,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Information gathering for web assessments",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 31:  asked team for update"
   },
   {
     "Request #": "A11Y-0699",
@@ -10867,12 +10867,12 @@
     "Date received": "2020-03-09",
     "Date resolved": "",
     "Service Delivery Standard": "7 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "loan Bank Services",
     "Service": "AT Products",
     "Sub-service": "Lend / return",
-    "Notes": ""
+    "Notes": "client has been advised that we will deal with this once we are back in the actual office"
   },
   {
     "Request #": "A11Y-0705",
@@ -10940,9 +10940,9 @@
     "Product": "",
     "Request source": "email",
     "Date received": "2020-02-20",
-    "Date resolved": "",
+    "Date resolved": "2020-04-02",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "",
@@ -11017,7 +11017,7 @@
     "Date received": "2020-03-10",
     "Date resolved": "",
     "Service Delivery Standard": "7 business days",
-    "Status": "In progress",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "loan Bank Services",
     "Service": "AT Products",
@@ -11030,9 +11030,9 @@
     "Product": "",
     "Request source": "Email",
     "Date received": "2020-03-10",
-    "Date resolved": "",
+    "Date resolved": "2020-03-10",
     "Service Delivery Standard": "5 business days",
-    "Status": "Assigned",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "Design and Development Advice on Accessible ICT",
     "Service": "External and Internal Web",
@@ -11105,9 +11105,9 @@
     "Product": "",
     "Request source": "Email",
     "Date received": "2020-03-11",
-    "Date resolved": "",
+    "Date resolved": "2020-03-11",
     "Service Delivery Standard": "5 business days",
-    "Status": "Assigned",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "Document review",
     "Service": "Document Guidelines",
@@ -11270,9 +11270,9 @@
     "Product": "",
     "Request source": "Email",
     "Date received": "2020-03-17",
-    "Date resolved": "",
+    "Date resolved": "2020-03-10",
     "Service Delivery Standard": "5 business days",
-    "Status": "In progress",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "Web assessments",
@@ -11292,7 +11292,7 @@
     "Category": "Accessibility Compliance Assessments on ICT Solutions",
     "Service": "non web assessment",
     "Sub-service": "",
-    "Notes": ""
+    "Notes": "March 31:  Assessment still in progress. Product hasn't been updated since 2016."
   },
   {
     "Request #": "A11Y-0733",
@@ -11341,13 +11341,13 @@
   },
   {
     "Request #": "A11Y-0736",
-    "Short description": "7226744 - client would like to use ZoomText",
-    "Product": "Zoomtext",
+    "Short description": "7226744 - client would like to use Zoom",
+    "Product": "",
     "Request source": "National Service Desk (NSD)",
     "Date received": "2020-03-23",
-    "Date resolved": "",
+    "Date resolved": "2020-03-23",
     "Service Delivery Standard": "5 business days",
-    "Status": "Assigned",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "Zoom Text for Windows",
@@ -11362,12 +11362,12 @@
     "Date received": "2020-03-24",
     "Date resolved": "",
     "Service Delivery Standard": "7 business days",
-    "Status": "Assigned",
+    "Status": "On Hold",
     "Case ?": "",
     "Category": "loan Bank Services",
     "Service": "AT Products",
     "Sub-service": "Lend / return",
-    "Notes": ""
+    "Notes": "client has been advised that we will deal with this once we are back in the actual office"
   },
   {
     "Request #": "A11Y-0738",
@@ -11465,14 +11465,14 @@
     "Product": "DNS",
     "Request source": "National Service Desk (NSD)",
     "Date received": "2020-03-30",
-    "Date resolved": "",
+    "Date resolved": "2020-04-01",
     "Service Delivery Standard": "5 business days",
-    "Status": "Assigned",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "Dragon Naturally Speaking",
     "Sub-service": "Software Installations / Removal",
-    "Notes": ""
+    "Notes": "March 30:  advised client of compability (document to faq covid-19)"
   },
   {
     "Request #": "A11Y-0745",
@@ -11495,9 +11495,9 @@
     "Product": "",
     "Request source": "email",
     "Date received": "2020-03-30",
-    "Date resolved": "",
+    "Date resolved": "2020-04-01",
     "Service Delivery Standard": "5 business days",
-    "Status": "Assigned",
+    "Status": "Resolved",
     "Case ?": "",
     "Category": "General Advice on accessible ICT",
     "Service": "",
@@ -11521,166 +11521,166 @@
   },
   {
     "Request #": "A11Y-0748",
-    "Short description": "",
+    "Short description": "making communications to employees accessible",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Request source": "Email",
+    "Date received": "2020-03-30",
+    "Date resolved": "2020-03-30",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
+    "Category": "General Advice on accessible ICT",
     "Service": "",
     "Sub-service": "",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0749",
-    "Short description": "",
+    "Short description": "Chat Bot - Web Accessibility Assistance",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
+    "Request source": "email",
+    "Date received": "2020-04-01",
     "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Service Delivery Standard": "10 business days",
+    "Status": "Assigned",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
+    "Category": "Accessibility Compliance Assessments on ICT Solutions",
+    "Service": "Web assessments",
     "Sub-service": "",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0750",
-    "Short description": "",
-    "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Short description": "client needed help to fine EI in favorites",
+    "Product": "JAWS",
+    "Request source": "Email",
+    "Date received": "2020-03-25",
+    "Date resolved": "2020-03-25",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
+    "Service": "JAWS",
+    "Sub-service": "coaching",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0751",
-    "Short description": "",
+    "Short description": "7214770 - client is requesting Penguin vertical mouse",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
+    "Request source": "National Service Desk (NSD)",
+    "Date received": "2020-03-17",
     "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Service Delivery Standard": "7 business days",
+    "Status": "On Hold",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
-    "Notes": ""
+    "Category": "loan Bank Services",
+    "Service": "AT Products",
+    "Sub-service": "Lend / return",
+    "Notes": "March 24:  advised client that this would be taken care of once we are back in the office as curently working from home due to covid-19"
   },
   {
     "Request #": "A11Y-0752",
-    "Short description": "",
+    "Short description": "HR Whitelisting application",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
+    "Request source": "Email",
+    "Date received": "2020-04-01",
     "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Service Delivery Standard": "10 business days",
+    "Status": "Assigned",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
+    "Category": "Accessibility Compliance Assessments on ICT Solutions",
+    "Service": "Web assessments",
     "Sub-service": "",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0753",
-    "Short description": "",
-    "Product": "",
-    "Request source": "",
-    "Date received": "",
+    "Short description": "7245824 - client has been upgraded to Win 10 and no longer has Dragon / also asking about how to remotely work with Dragon",
+    "Product": "DNS",
+    "Request source": "National Service Desk (NSD)",
+    "Date received": "2020-04-02",
     "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Service Delivery Standard": "15 business days",
+    "Status": "Assigned",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
+    "Service": "Dragon Naturally Speaking",
+    "Sub-service": "Troubleshooting / Configuration",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0754",
-    "Short description": "",
+    "Short description": "employee who has hearing aid required a special headset - essential employee during the covid 19 crisis",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
+    "Request source": "Email",
+    "Date received": "2020-04-02",
     "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Assigned",
     "Case ?": "",
-    "Category": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
     "Service": "",
     "Sub-service": "",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0755",
-    "Short description": "",
+    "Short description": "7246157 - request to have the program \"Antidote\" installed on the employee's work computer",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Request source": "Email",
+    "Date received": "2020-04-02",
+    "Date resolved": "2020-04-03",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
+    "Service": "Antidote",
+    "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0756",
-    "Short description": "",
-    "Product": "",
-    "Request source": "",
-    "Date received": "",
+    "Short description": "7246600 - client working from home on VPN and has trouble accessing Dragon",
+    "Product": "DNS",
+    "Request source": "National Service Desk (NSD)",
+    "Date received": "2020-04-03",
     "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Service Delivery Standard": "15 business days",
+    "Status": "Assigned",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
+    "Service": "Dragon Naturally Speaking",
+    "Sub-service": "Troubleshooting / Configuration",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0757",
-    "Short description": "",
+    "Short description": "request for support for Canadians with hearing disabilities",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Request source": "Email",
+    "Date received": "2020-04-02",
+    "Date resolved": "2020-04-02",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "General Advice on accessible ICT",
+    "Service": "Products / Services",
+    "Sub-service": "General Consultation",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0758",
-    "Short description": "",
+    "Short description": "question on accessibility - EI looking for alternate ways to provide information to client",
     "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Request source": "Email",
+    "Date received": "2020-03-27",
+    "Date resolved": "2020-04-03",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
+    "Category": "Design and Development Advice on Accessible ICT",
+    "Service": "External and Internal Web",
     "Sub-service": "",
     "Notes": ""
   },
