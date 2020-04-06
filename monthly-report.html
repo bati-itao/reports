@@ -48,152 +48,46 @@
         });
     </script>
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont">Monthly Report - March 2020</h1>
-        <!-- <section class="alert alert-info hidden-print">
+        <h1 property="name" id="wb-cont">2020 Monthly Report</h1>
+         <section class="alert alert-info hidden-print">
           
             <h2>Instructions</h2>
-            <p>Select the start and end date of the desired week and click on the Submit button to generate the report. If you wish to save the report as a PDF click the print button and choose the printer Microsoft Print to PDF or Foxit PhantomPDF Printer. </p>
+            <p>Select the desired month and year and click on the Submit button to generate the report. If you wish to save the report as a PDF click the print button and choose the printer Microsoft Print to PDF or Foxit PhantomPDF Printer. </p>
         </section>
         <div class="wb-frmvld">
-        <form onsubmit="validateForm();return false" action="" method="GET" id="weeklyReportForm" class="hidden-print">
-            <div class="form-group">
-                <label for="startDate" class="required"><span class="field-name">Start Date</span><span class="datepicker-format"> (YYYY-MM-DD)</span></label>
-                <input class="form-control" id="startDate" name="startDate" type="date" data-rule-dateISO="true" required="required" />
-            </div>
-            <div class="form-group">
-                <label for="endDate" class="required"><span class="field-name">End Date</span><span class="datepicker-format"> (YYYY-MM-DD)</span></label>
-                <input class="form-control" id="endDate" name="endDate" type="date" data-rule-dateISO="true" required="required" />
-            </div>
+        <form onsubmit="" action="monthly-report-results.html" method="get" id="monthlyReportForm" class="hidden-print">
+           <div class="form-group">
+			<label for="month" class="required"><span class="field-name">Month</span></label>
+			<select class="form-control" id="month" name="month" autocomplete="honorific-prefix" required="required">
+				<option label="Select a month"></option>
+				<option value="January">January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+			</select>
+        </div>
+        <div class="form-group">
+			<label for="year" class="required"><span class="field-name">Year</span></label>
+			<select class="form-control" id="year" name="year" autocomplete="honorific-prefix" required="required">
+				<option label="Select a year"></option>
+				<option value="2020">2020</option>
+			</select>
+		</div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
         </div>
-    <div id="weeklyReport">
-    </div>-->
-        <h2>Ticket summary</h2>
-        <table class="wb-charts wb-charts-bar table">
-            <caption>Accessibility Centre of Excellence (ACE) Ticket summary</caption>
-            <thead>
-                <tr>
-                    <th>&nbsp;</th>
-                    <th>IT Related</th>
-                    <th>Non-IT Related</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>New This Month</th>
-                    <td id="nbReceivedIT"></td>
-                    <td id="nbReceived"></td>
-                </tr>
-                <tr>
-                    <th>Total new Resolved this Month</th>
-                    <td id="nbNewResolvedIT"></td>
-                    <td id="nbNewResolved"></td>
-                </tr>
-                <tr>
-                    <th>Total Resolved this Month</th>
-                    <td id="nbResolvedIT"></td>
-                    <td id="nbResolved"></td>
-                </tr>
-                <tr>
-                    <th>Active in Progress</th>
-                    <td id="nbInProgressIT"></td>
-                    <td id="nbInProgress"></td>
-                </tr>
-            </tbody>
-        </table>
-        <p>AVG Resolution time (days) IT Related: <span id="avgTimeIT"></span></p>
-        <p>AVG Resolution time (days) Non-IT Related: <span id="avgTime"></span></p>
-        <h2>Yearly rollup</h2>
-        <table class="wb-charts wb-charts table">
-            <caption>Yearly Rollup</caption>
-            <thead>
-                <tr>
-                    <th>Year to Date (2019-2020)</th>
-                    <th>Total New</th>
-                    <th>Total Resolved</th>
-                    <th>Active in Progress</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>IT Related</th>
-                    <td id="totalNewIT"></td>
-                    <td id="totalResolvedIT"></td>
-                    <td id="totalInProgressIT"></td>
-                </tr>
-                <tr>
-                    <th>Non-IT related</th>
-                    <td id="totalNew"></td>
-                    <td id="totalResolved"></td>
-                    <td id="totalInProgress"></td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Accessibility Compliance</h2>
-        <table class="table">
-            <caption>Web application/system</caption>
-            <thead>
-                <tr>
-                    <th>Fiscal 2019-20</th>
-                    <th>Public Facing Total number of Applications</th>
-                    <th>(Source TS) # at 100%</th>
-                    <th># < 100%</th>
-                    <th>TBD</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Q4</th>
-                    <td id="publicFacingTotal"></td>
-                    <td id="number1"></td>
-                    <td id="number2"></td>
-                    <td id="number3"></td>
-                </tr>
-                <tr>
-                    <th>Q1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Q2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Q3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table">
-            <caption>COTS and other applications (desktop, mainframe etc.)</caption>
-            <thead>
-                <tr>
-                    <th>Year to Date (2019-2020)</th>
-                    <th>Total number of Applications</th>
-                    <th>Total compliant</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Custom</th>
-                    <td id="customTotalApp"></td>
-                    <td id="customTotalCompliant"></td>
-                </tr>
-                <tr>
-                    <th>COTS</th>
-                    <td id="cotsTotalApp"></td>
-                    <td id="cotsTotalCompliant"></td>
-                </tr>
-            </tbody>
-        </table>
-        <button type="submit" class="btn btn-default hidden-print" onclick="window.print();return false;"><span
-                class="fa fa-print"></span> Print</button>
+    
+        
+       
+    
         <div id="def-preFooter" class="hidden-print"></div>
         <script src="./scripts/preFooter.min.js"></script>
     </main>
@@ -201,35 +95,7 @@
     <script src="./scripts/appFooter.min.js"></script>
     <script src="./scripts/refFooter.min.js"></script>
     <script src="./scripts/bati-itao.min.js"></script>
-    <script>
-        document.getElementById("nbReceived").innerHTML = nbReceivedMarch;
-        document.getElementById("nbNewResolved").innerHTML = nbNewResolvedMarch;
-        document.getElementById("nbResolved").innerHTML = nbResolvedMarch;
-        document.getElementById("nbInProgress").innerHTML = nbInProgressMarch;
-        document.getElementById("nbReceivedIT").innerHTML = nbReceivedMarchIT;
-        document.getElementById("nbNewResolvedIT").innerHTML = nbNewResolvedMarchIT;
-        document.getElementById("nbResolvedIT").innerHTML = nbResolvedMarchIT;
-        document.getElementById("nbInProgressIT").innerHTML = nbInProgressMarchIT;
-        document.getElementById("avgTime").innerHTML = Number.parseInt(averageTime);
-        document.getElementById("avgTimeIT").innerHTML = Number.parseInt(averageTimeIT);
-
-        document.getElementById("totalNew").innerHTML = totalNew;
-        document.getElementById("totalResolved").innerHTML = totalResolved;
-        document.getElementById("totalInProgress").innerHTML = totalInProgress;
-
-        document.getElementById("totalNewIT").innerHTML = totalNewIT;
-        document.getElementById("totalResolvedIT").innerHTML = totalResolvedIT;
-        document.getElementById("totalInProgressIT").innerHTML = totalInProgressIT;
-        document.getElementById("customTotalApp").innerHTML = customTotalApp;
-        document.getElementById("customTotalCompliant").innerHTML = customTotalCompliant;
-        document.getElementById("cotsTotalApp").innerHTML = cotsTotalApp;
-        document.getElementById("cotsTotalCompliant").innerHTML = cotsTotalCompliant;
-
-        document.getElementById("publicFacingTotal").innerHTML = publicFacingTotal;
-        document.getElementById("number1").innerHTML = number1;
-        document.getElementById("number2").innerHTML = number2;
-        document.getElementById("number3").innerHTML = number3;
-    </script>
+    
 </body>
 
 </html>
