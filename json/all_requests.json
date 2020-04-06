@@ -72,7 +72,7 @@
     "Category": "Awareness",
     "Service": "Strategy and Partnerships",
     "Sub-service": "André Demers",
-    "Notes": "The goal of the presentation is to improve the understanding of our journey mapping team, here at Service Canada, as we work on highlighting pain points and identifying opportunities for improvements while mapping clients’ journeys, particularly persons with disabilities, interacting with the government for services and programs across various channels.  We are located at Place du Portage, Phase IV in Gatineau (Hull)."
+    "Notes": "The goal of the presentation is to improve the understanding of our journey mapping team, here at Service Canada, as we work on highlighting pain points and identifying opportunities for improvements while mapping clients’ journeys, particularly persons with disabilities, interacting with the government for services and programs across various channels.  We are located at Place du Portage, Phase IV in Gatineau (Hull)."
   },
   {
     "Request #": "A11Y-00014",
@@ -1246,7 +1246,7 @@
   },
   {
     "Request #": "A11Y-0066",
-    "Short description": "The product owner needs an update on the progress of accessing CrushFTP Enterprise and an estimated  completion date",
+    "Short description": "The product owner needs an update on the progress of accessing CrushFTP Enterprise and an estimated  completion date",
     "Product": "",
     "Request source": "Email",
     "Date received": "2019-11-15",
@@ -1276,7 +1276,7 @@
   },
   {
     "Request #": "A11Y-0068",
-    "Short description": "J'ai maintenant Windows 10.  Adobe Reader n'est pas affecter pas ma configuration de couleur",
+    "Short description": "J'ai maintenant Windows 10.  Adobe Reader n'est pas affecter pas ma configuration de couleur",
     "Product": "",
     "Request source": "National Service Desk (NSD)",
     "Date received": "2019-11-08",
@@ -1645,7 +1645,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -2695,7 +2695,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Troubleshooting / Configuration",
     "Notes": ""
   },
@@ -5095,7 +5095,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -9910,7 +9910,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Troubleshooting / Configuration",
     "Notes": ""
   },
@@ -9940,7 +9940,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Troubleshooting / Configuration",
     "Notes": "March 3: team has contacted client - client is away all week"
   },
@@ -10525,7 +10525,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -10540,7 +10540,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -10735,7 +10735,7 @@
     "Status": "Resolved",
     "Case ?": "",
     "Category": "End-User Support for Assistive Adaptive Technology (AT)",
-    "Service": "wordQ & speakQ",
+    "Service": "wordQ & speakQ",
     "Sub-service": "Software Installations / Removal",
     "Notes": ""
   },
@@ -11686,32 +11686,32 @@
   },
   {
     "Request #": "A11Y-0759",
-    "Short description": "",
-    "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Short description": "client had questions on what was neeeded to work from home",
+    "Product": "JAWS",
+    "Request source": "Email",
+    "Date received": "2020-04-06",
+    "Date resolved": "2020-04-06",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
+    "Service": "JAWS",
+    "Sub-service": "coaching",
     "Notes": ""
   },
   {
     "Request #": "A11Y-0760",
-    "Short description": "",
-    "Product": "",
-    "Request source": "",
-    "Date received": "",
-    "Date resolved": "",
-    "Service Delivery Standard": "",
-    "Status": "",
+    "Short description": "client has never worked from home with Jaws and had questions",
+    "Product": "JAWS",
+    "Request source": "Email",
+    "Date received": "2020-04-06",
+    "Date resolved": "2020-04-06",
+    "Service Delivery Standard": "5 business days",
+    "Status": "Resolved",
     "Case ?": "",
-    "Category": "",
-    "Service": "",
-    "Sub-service": "",
+    "Category": "End-User Support for Assistive Adaptive Technology (AT)",
+    "Service": "JAWS",
+    "Sub-service": "coaching",
     "Notes": ""
   },
   {
