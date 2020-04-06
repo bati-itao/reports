@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Monthly Report - ESDC / IT Accessibility office</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description"
+        content="IT Accessibility Office provides adaptive technology and advocate for inclusiveness of people with disabilities in the workplace.">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/wet-en.js"></script>
+    <!-- Write closure template -->
+    <script src="./scripts/refTop.min.js"></script>
+    <!-- Scripts needed to generate the reports-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/monthly-report.js"></script>
+    <script src="scripts/csd.js"></script>
+    <script src="scripts/dml.js"></script>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+    </div>
+    <script>
+        $( document ).ready(function() {
+            validateForm();
+        });
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            "appName": [{
+                "text": "ESDC / IT Accessibility office",
+                "href": "https://bati-itao.github.io/"
+            }],
+            "breadcrumbs": [{
+                "title": "Reports",
+                "href": "./index.html"
+            }],
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "./_template-fr.html",
+                "text": "Français"
+            }],
+            "menuPath": "https://bati-itao.github.io/ajax/menu-en.html"
+        });
+    </script>
+    <main role="main" property="mainContentOfPage" class="container">
+       
+        
+    <div id="monthlyReport">
+    </div>
+        <h2>Accessibility Compliance</h2>
+        <div class="alert alert-warning">
+            <p>Please note that the section below is updated manually each month and is not generated from the monthly report form.</p>
+         </div>
+        <table class="table">
+            <caption>Web application/system</caption>
+            <thead>
+                <tr>
+                    <th>Fiscal 2019-20</th>
+                    <th>Public Facing Total number of Applications</th>
+                    <th>(Source TS) # at 100%</th>
+                    <th># < 100%</th>
+                    <th>TBD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Q4</th>
+                    <td id="publicFacingTotal"></td>
+                    <td id="number1"></td>
+                    <td id="number2"></td>
+                    <td id="number3"></td>
+                </tr>
+                <tr>
+                    <th>Q1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Q2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Q3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <caption>COTS and other applications (desktop, mainframe etc.)</caption>
+            <thead>
+                <tr>
+                    <th>Year to Date (2019-2020)</th>
+                    <th>Total number of Applications</th>
+                    <th>Total compliant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Custom</th>
+                    <td id="customTotalApp"></td>
+                    <td id="customTotalCompliant"></td>
+                </tr>
+                <tr>
+                    <th>COTS</th>
+                    <td id="cotsTotalApp"></td>
+                    <td id="cotsTotalCompliant"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="submitButton" type="submit" class="btn btn-default hidden-print" onclick="window.print();return false;"><span
+                class="fa fa-print"></span> Print</button>
+        <div id="def-preFooter" class="hidden-print"></div>
+        <script src="./scripts/preFooter.min.js"></script>
+    </main>
+    <div id="def-footer" class="hidden-print"></div>
+    <script src="./scripts/appFooter.min.js"></script>
+    <script src="./scripts/refFooter.min.js"></script>
+    <script src="./scripts/bati-itao.min.js"></script>
+    <script>
+
+        document.getElementById("customTotalApp").innerHTML = customTotalApp;
+        document.getElementById("customTotalCompliant").innerHTML = customTotalCompliant;
+        document.getElementById("cotsTotalApp").innerHTML = cotsTotalApp;
+        document.getElementById("cotsTotalCompliant").innerHTML = cotsTotalCompliant;
+
+        document.getElementById("publicFacingTotal").innerHTML = publicFacingTotal;
+        document.getElementById("number1").innerHTML = number1;
+        document.getElementById("number2").innerHTML = number2;
+        document.getElementById("number3").innerHTML = number3;
+
+
+       
+
+
+
+        
+    </script>
+</body>
+
+</html>
