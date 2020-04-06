@@ -1,188 +1,269 @@
-//Non-IT Related
+//function to get values of form
+function getValue(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace( 
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
 
-var nbReceivedMarch = 0;
-var nbNewResolvedMarch = 0;
-var nbResolvedMarch = 0;
-var nbInProgressMarch = 0;
+	if ( param ) {
+		return vars[param] ? vars[param] : null;	
+	}
+	return vars;
+}
 
-//IT Related
+function validateForm() {
 
-var nbReceivedMarchIT = 0;
-var nbNewResolvedMarchIT = 0;
-var nbResolvedMarchIT = 0;
-var nbInProgressMarchIT = 0;
+        //var for the Non-IT column in the ACE ticket summary table
+        var monthCountNonIT = [];
+        monthCountNonIT["nbReceived"] = 0;
+        monthCountNonIT["nbNewResolved"] = 0;
+        monthCountNonIT["nbResolved"] = 0;
+        monthCountNonIT["nbResolvedAfterCurrentMonth"] = 0;
+        monthCountNonIT["nbNoDateResolved"] = 0;
+        monthCountNonIT["nbInProgress"] = 0;
 
-//AVG
-var counter = 0;
-var processingTime = 0;
+        //var for the IT column in the ACE ticket summary table
+        var monthCountIT = [];
+        monthCountIT["nbReceived"] = 0;
+        monthCountIT["nbNewResolved"] = 0;
+        monthCountIT["nbResolved"] = 0;
+        monthCountIT["nbResolvedAfterCurrentMonth"] = 0;
+        monthCountIT["nbNoDateResolved"] = 0;
+        monthCountIT["nbInProgress"] = 0;
 
-var counterIT = 0;
-var processingTimeIT = 0;
+        //var for the Non-IT average
+        var avgNonIT = [];
+        avgNonIT["counter"] = 0;
+        avgNonIT["processingTime"] = 0;
+        avgNonIT["differenceInTime"] = 0;
+        avgNonIT["differenceInDays"] = 0;
+        avgNonIT["averageTime"] = 0;
 
-var dateReceived;
-var dateResolved;
+        //var for the IT average
+        var avgIT = [];
+        avgIT["counter"] = 0;
+        avgIT["processingTime"] = 0;
+        avgIT["differenceInTime"] = 0;
+        avgIT["differenceInDays"] = 0;
+        avgIT["averageTime"] = 0;
 
-var dateReceivedIT;
-var dateResolvedIT;
+        //var for the Non-IT row in the yearly rollup table
+        var yearCountNonIT = [];
+        yearCountNonIT["totalNew"] = 0;
+        yearCountNonIT["totalResolved"] = 0;
+        yearCountNonIT["totalResolvedAfterCurrentMonth"] = 0;
+        yearCountNonIT["totalNoDateResolved"] = 0;
+        yearCountNonIT["totalInProgress"] = 0;
 
-var differenceInTime;
-var differenceInDays;
+        //var for the IT row in the yearly rollup table
+        var yearCountIT = [];
+        yearCountIT["totalNew"] = 0;
+        yearCountIT["totalResolved"] = 0;
+        yearCountIT["totalResolvedAfterCurrentMonth"] = 0;
+        yearCountIT["totalNoDateResolved"] = 0;
+        yearCountIT["totalInProgress"] = 0;
 
-var differenceInTimeIT;
-var differenceInDaysIT;
+        //function that does all the counting for each element of the json file
+        var json = (function () {
+            $.ajax({
+                'async': false,
+                'global': false,
+                'url': "./json/all_requests.json",
+                'dataType': "json",
+                'success': function (data) {
+                    json = data;
+                    json.forEach(element => {
 
-var averageTime;
-var averageTimeIT;
+                        //verify which month and year is selected
+                        var selectedMonth = "";
+                        var selectedYear = "";
 
-//Total
-
-var october = new Date(2019, 10, 01);
-var march = new Date(2020, 03, 31);
-var totalDateReceived;
-var totalDateReceivedIT;
-var totalNew = 0;
-var totalNewIT = 0;
-
-var totalDateResolved;
-var totalDateResolvedIT;
-var totalResolved = 0;
-var totalResolvedIT = 0;
-var inProgress1 = 0;
-var inProgress2 = 0;
-var inProgress1IT = 0;
-var inProgress2IT = 0;
-var totalInProgress;
-var totalInProgressIT;
-
-var json = (function () {
-    var json = null;
-    $.ajax({
-        'async': false,
-        'global': false,
-        'url': "./json/all_requests.json",
-        'dataType': "json",
-        'success': function (data) {
-            json = data;
-            json.forEach(element => {
-
-                //Non-IT Related
-                switch (element["Category"]) {
-                    case "Awareness":
-                    case "Design and Development Advice on Accessible ICT":
-                    case "Document review":
-                    case "General Advice on accessible ICT":
-                    case "Information and Awareness on Accessibility Topics":
-                    case "Presentation":
-                    case "Procurement Advice on Accessible ICT":
-                    case "Training":
-                        if (element["Date received"].includes("2020-03")) {
-                            switch (element["Status"]) {
-                                case "In progress":
-                                case "Assigned":
-                                case "On Hold":
-                                    nbInProgressMarch++;
-                                    break;
-                            };
-                            nbReceivedMarch++;
+                        switch (getValue("month")) {
+                            case "January":
+                                selectedMonth = "01";
+                                break;
+                            case "February":
+                                selectedMonth = "02";
+                                break;
+                            case "March":
+                                selectedMonth = "03";
+                                break;
+                            case "April":
+                                selectedMonth = "04";
+                                break;
+                            case "May":
+                                selectedMonth = "05";
+                                break;
+                            case "June":
+                                selectedMonth = "06";
+                                break;
+                            case "July":
+                                selectedMonth = "07";
+                                break;
+                            case "August":
+                                selectedMonth = "08";
+                                break;
+                            case "September":
+                                selectedMonth = "09";
+                                break;
+                            case "October":
+                                selectedMonth = '10';
+                                break;
+                            case "November":
+                                selectedMonth = "11";
+                                break;
+                            case "December":
+                                selectedMonth = "12";
+                                break;
                         };
-                        if (element["Date resolved"].includes("2020-03") && element["Date received"].includes("2020-03")) {
-                            nbNewResolvedMarch++;
-                            //AVG Non-IT
-                            dateReceived = new Date(element["Date received"]);
-                            dateResolved = new Date(element["Date resolved"]);
-                            differenceInTime = dateResolved.getTime() - dateReceived.getTime();
-                            differenceInDays = differenceInTime / (1000 * 3600 * 24);
-                            counter++;
-                            processingTime += differenceInDays;
+                        switch (getValue("year")) {
+                            case "2020":
+                                selectedYear = "2020";
+                                break;
                         };
-                        if (element["Date resolved"].includes("2020-03")) {
-                            nbResolvedMarch++;
+
+                        var october = new Date("2019-10-01"); //This var is needed for the yearly report section
+                        var endSelectedMonth = new Date(selectedYear, selectedMonth, 0); // Calculates the end of the selected month
+                        var dateReceived = new Date(element["Date received"]);
+                        var dateResolved = new Date(element["Date resolved"]);
+
+
+                        //Non-IT Categories
+                        switch (element["Category"]) {
+                            case "Awareness":
+                            case "Design and Development Advice on Accessible ICT":
+                            case "Document review":
+                            case "General Advice on accessible ICT":
+                            case "Information and Awareness on Accessibility Topics":
+                            case "Presentation":
+                            case "Procurement Advice on Accessible ICT":
+                            case "Training":
                             
-                        };
-                        
-                        totalDateReceived = new Date(element["Date received"]);
-                        totalDateResolved = new Date(element["Date resolved"]);
-                        if (totalDateReceived.getTime() <= march.getTime() && totalDateReceived.getTime() >= october.getTime()) {
-                            totalNew++;
-                            if (totalDateResolved.getTime() > march.getTime()) {
-                                inProgress1++;
-                            };
-                            if ((element["Date resolved"]) == "") {
-                                if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
-                                    inProgress2++;
+                                if (element["Date received"].includes(selectedYear + "-" + selectedMonth)) { //verify if the date received includes the selected month and year
+                                    monthCountNonIT["nbReceived"]++;
+                                    if (dateResolved.getTime() > endSelectedMonth.getTime()) { //verify if it was resolved after the end of the selected month
+                                        monthCountNonIT["nbResolvedAfterCurrentMonth"]++;
+                                    };
+                                    if ((element["Date resolved"]) == "") { //verify if the date resolved coolumn is empty
+                                        if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") { //verify if the status is different from resolved and closed
+                                            monthCountNonIT["nbNoDateResolved"]++;
+                                        };
+                                    };
+                                    monthCountNonIT["nbInProgress"] = monthCountNonIT["nbResolvedAfterCurrentMonth"] + monthCountNonIT["nbNoDateResolved"];
+
+
                                 };
-                            };
-                            totalInProgress = inProgress1 + inProgress2;
-                        }; 
-                        
-                        if (totalDateResolved.getTime() <= march.getTime() && totalDateResolved.getTime() >= october.getTime()) {
-                            totalResolved++;
-                        }; 
-                        break;
-                    case "Accessibility":
-                    case "Accessibility Compliance Assessments on ICT Solutions":
-                    case "Accessibility Compliance Project Management Services":
-                    case "Assessment":
-                    case "Client’s Need Assessment":
-                    case "End-User Support for Assistive Adaptive Technology (AT)":
-                    case "General request":
-                    case "General Requests for Adaptive Technology (AT)":
-                    case "Hearing loss":
-                    case "loan Bank Services":
-                    case "Low vision":
-                    case "Mobility":
-                    case "Other":
-                        if (element["Date received"].includes("2020-03")) {
-                            nbReceivedMarchIT++;
-                            switch (element["Status"]) {
-                                case "In progress":
-                                case "Assigned":
-                                case "On Hold":
-                                    nbInProgressMarchIT++;
-                                    break;
-                            };
-                        };
-                        if (element["Date resolved"].includes("2020-03") && element["Date received"].includes("2020-03")) {
-                            nbNewResolvedMarchIT++
-                            dateReceivedIT = new Date(element["Date received"]);
-                            dateResolvedIT = new Date(element["Date resolved"]);
-                            differenceInTimeIT = dateResolvedIT.getTime() - dateReceivedIT.getTime();
-                            differenceInDaysIT = differenceInTimeIT / (1000 * 3600 * 24);
-                            counterIT++;
-                            processingTimeIT += differenceInDaysIT;
-                        };
-                        if (element["Date resolved"].includes("2020-03")) {
-                            nbResolvedMarchIT++;
+                                if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth) && element["Date received"].includes(selectedYear + "-" + selectedMonth)) { //verify if the date resolved and received includes the selected month and year
+                                    monthCountNonIT["nbNewResolved"]++;
+
+                                    //Calculates the AVG for Non-IT categories
+                                    avgNonIT["differenceinTime"] = dateResolved.getTime() - dateReceived.getTime();
+                                    avgNonIT["differenceinDays"] = avgNonIT["differenceinTime"] / (1000 * 3600 * 24);
+                                    avgNonIT["counter"]++;
+                                    avgNonIT["processingTime"] += avgNonIT["differenceinDays"];
+                                };
+
+                                if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth)) {
+                                    monthCountNonIT["nbResolved"]++;
+                                };
+
+
+                                if (dateReceived.getTime() <= endSelectedMonth.getTime() && dateReceived.getTime() >= october.getTime()) {
+                                //verify of the date received is before the end of the selected month and after october 2019
+                                    yearCountNonIT["totalNew"]++;
+                                    if (dateResolved.getTime() > endSelectedMonth.getTime()) {
+                                        //verify if the date resolved is before the end of the month
+                                        yearCountNonIT["totalResolvedAfterCurrentMonth"]++;
+                                    };
+                                    if ((element["Date resolved"]) == "") {
+                                        //verify if the date resolved is empty and if the status is different from resolved and closed
+                                        if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
+                                            yearCountNonIT["totalNoDateResolved"]++;
+                                        };
+                                    };
+                                    yearCountNonIT["totalInProgress"] = yearCountNonIT["totalResolvedAfterCurrentMonth"] + yearCountNonIT["totalNoDateResolved"];
+                                };
+
+                                if (dateResolved.getTime() <= endSelectedMonth.getTime() && dateResolved.getTime() >= october.getTime()) {
+                                    //verify if the date resolved is before the end of the month and after october 2019
+                                    yearCountNonIT["totalResolved"]++;
+                                };
+                                break;
                             
-                        };
-                        
-                        totalDateReceivedIT = new Date(element["Date received"]);
-                        totalDateResolvedIT = new Date(element["Date resolved"]);
-                        if (totalDateReceivedIT.getTime() <= march.getTime() && totalDateReceivedIT.getTime() >= october.getTime()) {
-                            totalNewIT++;
-                            if (totalDateResolvedIT.getTime() > march.getTime()) {
-                                inProgress1IT++;
-                            };
-                            if ((element["Date resolved"]) == "") {
-                                if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
-                                    inProgress2IT++;
+                            // IT Categories (calculation are the same as the Non IT ones)
+                            case "Accessibility":
+                            case "Accessibility Compliance Assessments on ICT Solutions":
+                            case "Accessibility Compliance Project Management Services":
+                            case "Assessment":
+                            case "Client’s Need Assessment":
+                            case "End-User Support for Assistive Adaptive Technology (AT)":
+                            case "General request":
+                            case "General Requests for Adaptive Technology (AT)":
+                            case "Hearing loss":
+                            case "loan Bank Services":
+                            case "Low vision":
+                            case "Mobility":
+                            case "Other":
+                                if (element["Date received"].includes(selectedYear + "-" + selectedMonth)) {
+                                    monthCountIT["nbReceived"]++;
+                                    if (dateResolved.getTime() > endSelectedMonth.getTime()) {
+                                        monthCountIT["nbResolvedAfterCurrentMonth"]++;
+                                    };
+                                    if ((element["Date resolved"]) == "") {
+                                        if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
+                                            monthCountIT["nbNoDateResolved"]++;
+                                        };
+                                    };
+                                    monthCountIT["nbInProgress"] = monthCountIT["nbResolvedAfterCurrentMonth"] + monthCountIT["nbNoDateResolved"];
                                 };
-                            };
-                            totalInProgressIT = inProgress1IT + inProgress2IT;
-                        }; 
-                        
-                        if (totalDateResolvedIT.getTime() <= march.getTime() && totalDateResolvedIT.getTime() >= october.getTime()) {
-                            totalResolvedIT++;
-                        }; 
-                        break;
-                };
-            }
-            );
-        }
+                                if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth) && element["Date received"].includes(selectedYear + "-" + selectedMonth)) {
+                                    monthCountIT["nbNewResolved"]++
+                                    avgIT["differenceInTime"] = dateResolved.getTime() - dateReceived.getTime();
+                                    avgIT["differenceInDays"] = avgIT["differenceInTime"] / (1000 * 3600 * 24);
+                                    avgIT["counter"]++;
+                                    avgIT["processingTime"] += avgIT["differenceInDays"];
+                                };
+                                if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth)) {
+                                    monthCountIT["nbResolved"]++;
+                                };
+                                if (dateReceived.getTime() <= endSelectedMonth.getTime() && dateReceived.getTime() >= october.getTime()) {
+                                    yearCountIT["totalNew"]++;
+                                    if (dateResolved.getTime() > endSelectedMonth.getTime()) {
+                                        yearCountIT["totalResolvedAfterCurrentMonth"]++;
+                                    };
+                                    if ((element["Date resolved"]) == "") {
+                                        if ((element["Status"]) != "Resolved" && (element["Status"]) != "closed") {
+                                            yearCountIT["totalNoDateResolved"]++;
+                                        };
+                                    };
+                                    yearCountIT["totalInProgress"] = yearCountIT["totalResolvedAfterCurrentMonth"] + yearCountIT["totalNoDateResolved"];
+                                };
+                                if (dateResolved.getTime() <= endSelectedMonth.getTime() && dateResolved.getTime() >= october.getTime()) {
+                                    yearCountIT["totalResolved"]++;
+                                };
+                                break;
+                        };
 
-    });
-    averageTime = processingTime / counter;
-    averageTimeIT = processingTimeIT / counterIT;
-})
-    ();
+                    }
+                    );
+                }
 
+            });
+            //final calculation for average
+            avgNonIT["averageTime"] = avgNonIT["processingTime"] / avgNonIT["counter"];
+            avgIT["averageTime"] = avgIT["processingTime"] / avgIT["counter"];
+           
+        })
+            ();
+        document.getElementById("monthlyReport").innerHTML = '<h1 property="name" id="wb-cont">'+ getValue("month") +' '+ getValue("year") +' Monthly Report</h1><h2>Ticket summary</h2><table class="wb-charts wb-charts-bar table"><caption>Accessibility Centre of Excellence (ACE) Ticket summary</caption><tr><th>&nbsp;</th><th>IT Related</th><th>Non-IT Related</th></tr><tr><th>New This Month</th><td>' + monthCountIT["nbReceived"] + '</td><td>' + monthCountNonIT["nbReceived"] + '</td></tr><tr><th>Total new Resolved this Month</th><td>' + monthCountIT["nbNewResolved"] + '</td><td>' + monthCountNonIT["nbNewResolved"] + '</td></tr><tr><th>Total Resolved this Month</th><td>' + monthCountIT["nbResolved"] + '</td><td>' + monthCountNonIT["nbResolved"] + '</td></tr><tr><th>Active in Progress</th><td>' + monthCountIT["nbInProgress"] + '</td><td>' + monthCountNonIT["nbInProgress"] + '</td></tr></tbody></table><p>AVG Resolution time (days) IT Related: ' + Number.parseInt(avgIT["averageTime"]) + '</p><p>AVG Resolution time (days) Non-IT Related: ' + Number.parseInt(avgNonIT["averageTime"]) + '</p><h2>Yearly rollup</h2><table class="wb-charts wb-charts-bar table"><caption>Yearly Rollup</caption><tr><th>Year to Date (2019-2020)</th><th>IT Related</th><th>Non-IT Related</th></tr><tr><th>Total New</th><td>' + yearCountIT["totalNew"] + '</td><td>' + yearCountNonIT["totalNew"] + '</td></tr><tr><th>Total Resolved</th><td>' + yearCountIT["totalResolved"] + '</td><td>' + yearCountNonIT["totalResolved"] + '</td></tr><tr><th>Active in Progress</th><td>' + yearCountIT["totalInProgress"] + '</td><td>' + yearCountNonIT["totalInProgress"] + '</td></tr></table>';
+
+       
+
+        
+
+
+    
+}
