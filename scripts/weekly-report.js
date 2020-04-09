@@ -8,7 +8,7 @@ function validateForm() {
         var ticketsOpenTotal;
         var ticketsClosed = 0;
         var nbNewTicket = 0;
-
+        var onHold = 0;
         //AVG
         var counter = 0;
         var processingTime = 0;
@@ -35,6 +35,10 @@ function validateForm() {
                     json.forEach(element => {
                         var dateReceived = new Date(element["Date received"]);
                         var dateResolved = new Date(element["Date resolved"]);
+                        if ((element["Status"]) == "On Hold" || (element["Status"]) == "on hold")
+                        {
+                            onHold++;
+                        }
                         if ((element["Date received"]) != "") {
                             if (dateReceived.getTime() <= endDate.getTime()) {
 
@@ -78,6 +82,6 @@ function validateForm() {
             }
         })
             ();
-        document.getElementById("weeklyReport").innerHTML = '<h2>Week of ' + document.getElementById("startDate").value + ' to ' + document.getElementById("endDate").value + '</h2><p>Number of tickets open total: ' + ticketsOpenTotal + '</p><p>Number of closed tickets this week: ' + ticketsClosed + '</p><p>Average response time: ' + Number.parseInt(averageTime) + ' days</p><p>Number of new tickets this week: ' + nbNewTicket + '</p><p>From which:</p><ul>' + showCategories + '</ul>';
+        document.getElementById("weeklyReport").innerHTML = '<h2>Week of ' + document.getElementById("startDate").value + ' to ' + document.getElementById("endDate").value + '</h2><p>Number of tickets open total: ' + ticketsOpenTotal + '</p><ul><li>*On hold: '+ onHold +'</li></ul><p>Number of closed tickets this week: ' + ticketsClosed + '</p><p>Average response time: ' + Number.parseInt(averageTime) + ' days</p><p>Number of new tickets this week: ' + nbNewTicket + '</p><p>From which:</p><ul>' + showCategories + '</ul><p>* Please note that this count is for the requests that are on hold in the present only</p>';
     }
 }  
