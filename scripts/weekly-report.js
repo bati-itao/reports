@@ -82,6 +82,6 @@ function validateForm() {
             }
         })
             ();
-        document.getElementById("weeklyReport").innerHTML = '<h2>Week of ' + document.getElementById("startDate").value + ' to ' + document.getElementById("endDate").value + '</h2><p>Number of tickets open total: ' + ticketsOpenTotal + '</p><ul><li>*Number of tickets on hold: '+ onHold +'</li></ul><p>Number of closed tickets this week: ' + ticketsClosed + '</p><p>Average response time: ' + Number.parseInt(averageTime) + ' days</p><p>Number of new tickets this week: ' + nbNewTicket + '</p><p>From which:</p><ul>' + showCategories + '</ul><p>* Please note that this count is for the requests that are on hold in the present only</p>';
+        document.getElementById("weeklyReport").innerHTML = '<h2>Week of ' + document.getElementById("startDate").value + ' to ' + document.getElementById("endDate").value + '</h2><p>Number of tickets open total: ' + ticketsOpenTotal + '</p><p>Number of tickets on hold: '+ onHold +'</p><p>Number of closed tickets this week: ' + ticketsClosed + '</p><p>Average response time: ' + Number.parseInt(averageTime) + ' days</p><p>Number of new tickets this week: ' + nbNewTicket + '</p><p>From which:</p><ul>' + showCategories + '</ul><p>* Please note that the "On Hold" count is for the requests that are on hold in the present only</p>';
     }
 }  
