@@ -1,3 +1,12 @@
+function calculateWeekendDays(fromDate, toDate){
+    var weekendDayCount = 0;    
+    while(fromDate < toDate){
+        fromDate.setDate(fromDate.getDate() + 1);
+        if(fromDate.getDay() === 0 || fromDate.getDay() == 6){
+            ++weekendDayCount ;
+        }
+    }    return weekendDayCount ;
+}
 function validateForm() {
 
     if (document.getElementById("startDate").value.length && document.getElementById("endDate").value.length != 0) {
@@ -14,6 +23,7 @@ function validateForm() {
         var processingTime = 0;
         var differenceInTime;
         var differenceInDays;
+        var differenceInDaysNoWeekEnd;
         var averageTime;
 
         //Categories
@@ -35,6 +45,8 @@ function validateForm() {
                     json.forEach(element => {
                         var dateReceived = new Date(element["Date received"]);
                         var dateResolved = new Date(element["Date resolved"]);
+                        var dateReceivedAVG = new Date(element["Date received"]);
+                        var dateResolvedAVG = new Date(element["Date resolved"]);
                         if ((element["Status"]) == "On Hold" || (element["Status"]) == "on hold")
                         {
                             onHold++;
@@ -57,12 +69,13 @@ function validateForm() {
                         
                         if (dateResolved.getTime() <= endDate.getTime() && dateResolved.getTime() >= startDate.getTime()) {
                             ticketsClosed++;
+                            var nbWeekend = calculateWeekendDays(dateReceivedAVG,dateResolvedAVG); 
                             differenceInTime = dateResolved.getTime() - dateReceived.getTime();
                             differenceInDays = differenceInTime / (1000 * 3600 * 24);
+                            differenceInDaysNoWeekEnd = differenceInDays - nbWeekend;
                             counter++;
-                            processingTime += differenceInDays;
-                        }; 
-
+                            processingTime += differenceInDaysNoWeekEnd;
+                        };
                         if (dateReceived.getTime() <= endDate.getTime() && dateReceived.getTime() >= startDate.getTime()) {
                             nbNewTicket++;
                             nbCategories[element["Category"]] === undefined ? nbCategories[element["Category"]] = 1 : nbCategories[element["Category"]]++;

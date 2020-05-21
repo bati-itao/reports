@@ -13,6 +13,15 @@ function getValue(param) {
 	}
 	return vars;
 }
+function calculateWeekendDays(fromDate, toDate){
+    var weekendDayCount = 0;    
+    while(fromDate < toDate){
+        fromDate.setDate(fromDate.getDate() + 1);
+        if(fromDate.getDay() === 0 || fromDate.getDay() == 6){
+            ++weekendDayCount ;
+        }
+    }    return weekendDayCount ;
+}
 
 function validateForm() {
 
@@ -41,6 +50,7 @@ function validateForm() {
         avgNonIT["differenceInTime"] = 0;
         avgNonIT["differenceInDays"] = 0;
         avgNonIT["averageTime"] = 0;
+        avgNonIT["differenceInDaysNoWeekEnd"] = 0;
 
         //var for the IT average
         var avgIT = [];
@@ -49,6 +59,7 @@ function validateForm() {
         avgIT["differenceInTime"] = 0;
         avgIT["differenceInDays"] = 0;
         avgIT["averageTime"] = 0;
+        avgIT["differenceInDaysNoWeekEnd"] = 0;
 
         //var for the Non-IT row in the yearly rollup table
         var yearCountNonIT = [];
@@ -129,6 +140,10 @@ function validateForm() {
                         var endSelectedMonth = new Date(selectedYear, selectedMonth, 0); // Calculates the end of the selected month
                         var dateReceived = new Date(element["Date received"]);
                         var dateResolved = new Date(element["Date resolved"]);
+                        var dateReceivedAvg = new Date(element["Date received"]);
+                        var dateResolvedAvg = new Date(element["Date resolved"]);
+                        var dateReceivedAvgIT = new Date(element["Date received"]);
+                        var dateResolvedAvgIT = new Date(element["Date resolved"]);
 
 
                         //Non-IT Categories
@@ -160,10 +175,12 @@ function validateForm() {
                                     monthCountNonIT["nbNewResolved"]++;
 
                                     //Calculates the AVG for Non-IT categories
-                                    avgNonIT["differenceinTime"] = dateResolved.getTime() - dateReceived.getTime();
-                                    avgNonIT["differenceinDays"] = avgNonIT["differenceinTime"] / (1000 * 3600 * 24);
+                                    var nbWeekend = calculateWeekendDays(dateReceivedAvg,dateResolvedAvg); 
+                                    avgNonIT["differenceInTime"] = dateResolved.getTime() - dateReceived.getTime();
+                                    avgNonIT["differenceInDays"] = avgNonIT["differenceInTime"] / (1000 * 3600 * 24);
+                                    avgNonIT["differenceInDaysNoWeekEnd"] = avgNonIT["differenceInDays"] - nbWeekend;
                                     avgNonIT["counter"]++;
-                                    avgNonIT["processingTime"] += avgNonIT["differenceinDays"];
+                                    avgNonIT["processingTime"] += avgNonIT["differenceInDaysNoWeekEnd"];
                                 };
 
                                 if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth)) {
@@ -220,11 +237,14 @@ function validateForm() {
                                     monthCountIT["nbInProgress"] = monthCountIT["nbResolvedAfterCurrentMonth"] + monthCountIT["nbNoDateResolved"];
                                 };
                                 if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth) && element["Date received"].includes(selectedYear + "-" + selectedMonth)) {
-                                    monthCountIT["nbNewResolved"]++
+                                    monthCountIT["nbNewResolved"]++;
+                                    var nbWeekendIT = calculateWeekendDays(dateReceivedAvgIT,dateResolvedAvgIT); 
+                                   
                                     avgIT["differenceInTime"] = dateResolved.getTime() - dateReceived.getTime();
-                                    avgIT["differenceInDays"] = avgIT["differenceInTime"] / (1000 * 3600 * 24);
+                                    avgIT["differenceInDays"] = (avgIT["differenceInTime"]  / (1000 * 3600 * 24));
+                                    avgIT["differenceInDaysNoWeekEnd"] = avgIT["differenceInDays"] - nbWeekendIT;
                                     avgIT["counter"]++;
-                                    avgIT["processingTime"] += avgIT["differenceInDays"];
+                                    avgIT["processingTime"] += avgIT["differenceInDaysNoWeekEnd"];
                                 };
                                 if (element["Date resolved"].includes(selectedYear + "-" + selectedMonth)) {
                                     monthCountIT["nbResolved"]++;
