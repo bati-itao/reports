@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="fr" dir="ltr">
+   <![endif]-->
+   <!--[if gt IE 8]><!-->
+   <html class="no-js" lang="en" dir="ltr">
+      <!--<![endif]-->
+      <head>
+         <meta charset="utf-8">
+         <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+         <title>February 2022 Summary / Bureau de l’accessibilité des TI</title>
+         <meta content="width=device-width,initial-scale=1" name="viewport">
+         <!-- Meta data -->
+         <meta name="description"
+            content="">
+         <!-- Meta data-->
+         <!-- Load closure template scripts -->
+         <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/soyutils.js"></script>
+         <script src="https://ssl-templates.services.gc.ca/rn/cls/wet/gcweb/cdts/compiled/wet-fr.js"></script>
+         <!-- Write closure template -->
+         <script src="../../scripts/refTop.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+      </head>
+      <body vocab="https://schema.org/" typeof="WebPage">
+         <div id="def-top">
+         </div>
+         <!-- Write closure template -->
+         <script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.appTop({
+                "appName": [{
+                    "text": "ESDC / IT Accessibility office",
+                    "href": "../index.html"
+                }],
+               "breadcrumbs" : [{
+                "title": "Home",
+                    "href" : "../index.html"
+                }, {
+                    "title" : "Learning",
+                    "href" : "../index.html"
+                }],
+                "lngLinks": [{
+                    "lang": "fr",
+                    "href": "./index-fr.html",
+                    "text": "Français"
+                }],
+                "menuPath": "../../ajax/menu-en.html"
+            });
+         </script>
+         <div class="container">
+            <div class="row">
+               <main role="main" property="mainContentOfPage" class="col-md-9 col-md-push-3">
+                  <h1 property="name" id="wb-cont">IT Accessibility Office Monthly Summary for February 2022</h1>
+                  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                  <script>
+                     var xValues = ["Existing Internal solutions (21)", "Existing COTS/FOSS (22)"];
+                     var yValues = [21,22];
+                     var barColors = [
+                     "#b91d47",
+                     "#00025c"
+                     ];
+                     
+                     new Chart("myChart", {
+                     type: "pie",
+                     data: {
+                     labels: xValues,
+                     datasets: [{
+                       backgroundColor: barColors,
+                       data: yValues
+                     }]
+                     },
+                     options: {
+                     title: {
+                       display: true,
+                       text: "Compliant ICT solutions across ESDC"
+                     }
+                     }
+                     });       
+                        
+                  </script>
+                  <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+                  <script>
+                     var xValues = ["End-user support (81)", "Document assessment (25)", "ICT Accessibility (43)","Advice and coaching (41)","Loan bank (11)"];
+                     var yValues = [81,25,43,41,11];
+                     var barColors = [
+                     "#1b365d",
+                     "#005555",
+                     "#046B99",
+                     "#333333",
+                     '#A10000'
+                     ];
+                     
+                     new Chart("myChart2", {
+                     type: "pie",
+                     data: {
+                     labels: xValues,
+                     datasets: [{
+                     backgroundColor: barColors,
+                     data: yValues
+                     }]
+                     },
+                     options: {
+                     title: {
+                     display: true,
+                     text: "Requests resolved this month"
+                     }
+                     }
+                     });       
+                  </script>
+                  <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+                  <script>
+                     var xValues = ["End-user support (7)", "Document assessment (5.4)", "ICT Accessibility (17)","Advice and coaching (4.4)","Loan bank (6)"];
+                     var yValues = [7,5.4,17,4.4,6];
+                     var barColors = [
+                     "#1b365d",
+                     "#005555",
+                     "#046B99",
+                     "#333333",
+                     '#A10000'
+                     ];
+                     
+                     new Chart("myChart3", {
+                     type: "pie",
+                     data: {
+                     labels: xValues,
+                     datasets: [{
+                     backgroundColor: barColors,
+                     data: yValues
+                     }]
+                     },
+                     options: {
+                     title: {
+                     display: true,
+                     text: "Average resolution time (days)"
+                     }
+                     }
+                     });       
+                  </script>
+                  <ul>
+                     <li>2253 accessibility requests resolved YTD.</li>
+                     <li>ITAO received 222 requests this month, an increase of 16% compared to February 2021, and an increase of 35% compared to January 2022.</li>
+                     <li>Requests for ICT assessments reached 19% this month.</li>
+                     <li>28 cerfitications and 19 pending from the International Association of Accessibility Professionnals (IAAP).</li>
+                  </ul>
+                  <h2>Pionner in accessibility</h2>
+                  <ul>
+                     <li>Accessibility Corner launched in IITB News to increase viewership and awareness on accessibility.</li>
+                     <li>ACP team engaged Vendor Management Office and Legal teams to reflect ACA regulations for COTS vendor communication.</li>
+                     <li>ACP Accessibility coaching service is changing the coding culture within ESDC developers.</li>
+                  </ul>
+                  <h2>Achievements</h2>
+                  <ul>
+                     <li>ITAO is now offering 3 courses with the College@ESDC;</li>
+                     <li>Staffing of seven new resources for Strategy and Audit team ongoing and estimated completion in February.</li>
+                     <li>ACP Info Sessions to Product owners of COTS/FOSS attended by 250 staff.</li>
+                     <li>ACP coaches presented at the February DeVCoP meeting to over 176 attendees to promote accessible coding.</li>
+                     <li>GABI solution for Xerox printer has been implemented, new clients to be added.</li>
+                  </ul>
+                  <h2>Challenges</h2>
+                  <ul>
+                     <li>New floor plan lacks sufficient office space for ACE employees - ongoing discussions with CFOB to modify the floor plans.</li>
+                     <li>Integrating desktop accessibility into the RMP.</li>
+                     <li>Delays implementing AT software to employees with disabilities.</li>
+                     <li>Bottleneck in packaging AT software because of the lack of capacity in the packaging team.</li>
+                     <li>GABI solution for Xerox printer has been implemented, new clients to be added.</li>
+                     <li>ACP  overview presented to DG that highlighted the progress to date, issues, risks and next steps to seek funding for major multi-year project.</li>
+                     <li>Revised ICT Accessibility strategy and alignment with ESDC Accessibility Office (EAO) strategy.</li>
+                     <li>ACP submitted multi-year Pressure funds - awaiting decision to continue the project for next fiscal year.</li>
+                  </ul>
+                  <h2>Roadblocks</h2>
+                  <ul>
+                     <li>Funding for ACP project for next four years.</li>
+                     <li>Engaging Application Development and the COTS owners for their commitments to work on achieving compliance due to conflicting priorities.</li>
+                  </ul>
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th scope="col">AT User support processes</th>
+                           <th scope="col">Status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th scope="row">Client service improvement</th>
+                           <td>In progress</td>
+                        </tr>
+                        <tr>
+                           <th scope="row">Optimizing and adjusting the intake process</th>
+                           <td>In progress</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th scope="col">Activity</th>
+                           <th scope="col">Status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th scope="row">Accessibility Compliance Project (ACP)</th>
+                           <td>"ACP to submit Gate 4-5 on April 19,2022 to close out Small project"</td>
+                        </tr>
+                        <tr>
+                           <th scope="row">ESDC ICT Accessibility Strategy</th>
+                           <td>Under review by ITAO</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <div id="def-preFooter"></div>
+                  <script src="../../scripts/preFooter.min.js"></script>
+               </main>
+               <nav id="wb-sec" class="wb-sec col-md-3 col-md-pull-9" typeof="SiteNavigationElement" role="navigation">
+                  <h2 class="wb-inv">Section menu</h2>
+                  <section class="list-group menu list-unstyled">
+                     <h3 class="wb-navcurr">
+                        Content
+                     </h3>
+                     <ul class=" list-group menu list-unstyled">
+                        <li>
+                           <details>
+                              <summary>Year 2022</summary>
+                        <li><a href="../monthly-report/2022/february.html">February</a></li>
+                        </details>
+                        </li>              
+                     </ul>
+                  </section>
+               </nav>
+            </div>
+         </div>
+         <div id="def-footer"></div>
+         <script src="../../scripts/appFooter.min.js"></script>
+         <script src="../../scripts/refFooter.min.js"></script>
+         <script src="../../scripts/bati-itao.min.js"></script>
+      </body>
+   </html>
